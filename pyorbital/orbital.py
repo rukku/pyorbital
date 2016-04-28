@@ -670,7 +670,7 @@ class _SGDP4(object):
             raise NotImplementedError('Deep space calculations not supported')
 
         if np.any(a < 1):
-            raise Exception('Satellite crased at time %s', utc_time)
+            raise Exception('Satellite crashed at time %s', utc_time)
         elif np.any(e < ECC_LIMIT_LOW):
             raise ValueError('Satellite modified eccentricity to low: %s < %e'
                              % (str(e[e < ECC_LIMIT_LOW]), ECC_LIMIT_LOW))
